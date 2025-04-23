@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+.fade-out-down {
+  animation: fadeOutDown 1.5s ease-in-out forwards;
+}
+
+.neon-text {
+  text-shadow: 0 0 5px #00bfff, 0 0 10px #00bfff, 0 0 15px #00bfff;
+}
+
+.neon-border {
+  border: 2px solid transparent;
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.6);
+}
+
+.neon-outline {
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.6);
+}
+
+.glow-bar {
+  box-shadow: 0 0 10px rgba(0, 255, 191, 0.6);
+}
